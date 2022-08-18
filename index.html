@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form - The Odin Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+
+        <div class="left-section">
+            <div class="banner">
+                <img src="./images/odin.png" alt="The Odin Project logo" class="banner-logo">
+                <h1 class="banner-text">Odin</h1>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="section-header">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                <p>Sign up <em>now</em> to get started.</p>
+                <p class="section-text">You <em>know</em> you want to.</p>
+            </div>
+
+            <form action="#">
+                <div class="form">
+                    <p class="form-header">Let's do this!</p>
+
+                    <div class="input">
+                        <label for="firstName">FIRST NAME</label>
+                        <input type="text" name="firstName" id="firstName">
+                        <div id="firstName-error" class="error"></div>
+                    </div>
+                    <div class="input">
+                        <label for="lastName">LAST NAME</label>
+                        <input type="text" name="lastName" id="lastName">
+                        <div id="lastName-error" class="error"></div>
+                    </div>
+                    <div class="input">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email">
+                        <div id="email-error" class="error"></div>
+                    </div>
+                    <div class="input">
+                        <label for="phoneNumber">PHONE NUMBER</label>
+                        <input type="number" name="phoneNumber" id="phoneNumber">
+                        <div id="phoneNumber-error" class="error"></div>
+                    </div>
+                    <div class="input">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password">
+                        <div id="password-error" class="error"></div>
+                    </div>
+                    
+                    <div class="input">
+                        <label for="confirmPassword">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword">
+                        <div id="confirmPassword-error" class="error"></div>
+                    </div>
+
+                </div>
+                <div class="btn">
+                    <button type="submit">Create Account</button>
+                </div>
+            </form>
+            
+            <div class="login">
+                <p class="login-text">Already have an account?<a href="#"> Log in</a></p>
+            </div>
+        </div>
+
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+</html>
