@@ -1,0 +1,231 @@
+:root {
+    --clr-light: #9160B2;
+    --clr-dark: #62337B;
+    --clr-bg: #F9FAFB;
+    --clr-form: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Odin';
+    font-style: normal;
+    font-style: normal;
+    src: url("./fonts/Norse-Bold.otf");
+}
+
+/* Global styling */
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+/* Left side page styling */
+.left-section {
+    width: 30vw;
+    background-image: url("./images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20vh;
+    padding: 1rem 0;
+    font-size: 2rem;
+    background-color: rgba(0,0,0,0.3);
+}
+.banner-logo {
+    height: 8rem;
+}
+.banner > h1 {
+    font-size: 7.5rem;
+    font-family: 'Odin', sans-serif;
+    color: var(--clr-form);
+}
+
+
+
+/* Right side page styling */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vw;
+    background-color: var(--clr-bg);
+}
+
+.section-header {
+    width: 80%;
+    margin-bottom: 1rem;
+    padding-left: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.section-text {
+    height: 8rem;
+    padding-top: 2rem;
+}
+
+/* Form styling */
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 3rem 4rem;
+    background-color: var(--clr-form);
+    box-shadow: 0 0.5rem 2rem 0.5rem rgba(0,0,0,0.5);
+}
+
+
+/*  */
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    font-size: 1.5rem;
+}
+
+input{
+    height: 3rem;
+    border: 1px solid var(--clr-light);
+    border-radius: 3px;
+}
+input:focus {
+    outline: none;
+    border: 0.2rem solid var(--clr-light);
+    box-shadow: inset 0 0 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.form-header {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--clr-light);
+}
+
+
+
+
+/* Bottom right-side page styling */
+button {
+    cursor: pointer;
+    padding: 1rem 4rem;
+    margin: 4rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    color: var(--clr-form);
+    background-color: var(--clr-light);
+    border: 0.1rem solid var(--clr-light);
+    border-radius: 0.5rem;
+}
+button:hover {
+    background-color: var(--clr-dark);
+}
+.btn {
+    padding-left: 4rem;
+}
+
+.login {
+    display: flex;
+    padding-left: 4rem;
+    font-size: 1rem;
+}
+.login-text {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--clr-light);
+}
+a:hover {
+    color: var(--clr-dark);
+}
+
+
+/* Validation styling */
+.error {
+    color: red;
+    font-size: 1rem;
+}
+
+
+
+/* Media Queries - Responsive Design */
+@media only screen and (max-width: 576px) {
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-section {
+        width: 100%;
+        background-size: 100vw;
+    }
+
+    .banner {
+        position: static;
+        width: auto;
+    }
+
+    .right-section {
+        width: auto;
+    }
+
+    .section-header {
+        width: auto;
+        margin-top: 4rem;
+        margin-right: 6rem;
+    }
+    .section-text {
+        margin-top: 2rem;
+        margin-bottom: -1rem;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 4.7rem;
+    }
+
+    .input {
+        text-align: left;
+        width: auto;
+        font-size: 1rem;
+    }
+
+    input {
+        width: 60vw;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .login {
+        justify-content: center;
+    }
+    .login, .btn {
+        padding-right: 4rem;
+    }
+
+    .login-text {
+        padding-bottom: 3rem;
+    }
+}
